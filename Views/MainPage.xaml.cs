@@ -27,6 +27,8 @@ namespace Task_Tracker
             this.InitializeComponent();
         }
 
+
+        //TODO: add settings options
         private void navigationPanel_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             FrameNavigationOptions navigationOptions = new FrameNavigationOptions();
