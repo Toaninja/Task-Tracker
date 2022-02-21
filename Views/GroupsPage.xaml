@@ -7,9 +7,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        
+    </Page.Resources>
+
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="670,425,0,0" Text="All Groups" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <StackPanel Orientation="Horizontal" >
+            <ListView x:Name="NavGroupsList"/>
+            
+        </StackPanel>
+
+
+
 
     </Grid>
 </Page>
+    

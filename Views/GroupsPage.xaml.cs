@@ -25,8 +25,20 @@ namespace Task_Tracker
         public GroupsPage()
         {
             this.InitializeComponent();
+
+            GroupDataBind();
+
         }
 
+        void GroupDataBind()
+        {
+            ServiceGroupBuilder groupBuilder = new ServiceGroupBuilder();
+            NavGroupsList.ItemsSource = groupBuilder.groupsListBuilder();
+        }
 
+        private void NavGroupsList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

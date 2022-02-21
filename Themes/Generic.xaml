@@ -1,10 +1,7 @@
-﻿<Application
-    x:Class="Task_Tracker.App"
+<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Task_Tracker">
 
     
-</Application>
-
-    
+</ResourceDictionary>
