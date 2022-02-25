@@ -4,13 +4,19 @@
 
     <DataTemplate x:Key="GroupTemplate">
         <StackPanel>
-            <TextBlock Text="{Binding Path=Name}">
-                
-            </TextBlock>
+            <TextBlock Text="{Binding Path=Name}"/>
+            <TextBlock Text="{Binding Path=autoArchive}"/>
+            <TextBlock Text="{Binding Path=Name}"/>
+            
+
         </StackPanel>
         
     </DataTemplate>
-    
+
+    <DataTemplate x:Key="DetailTemplate">
+        
+    </DataTemplate>
+
 </ResourceDictionary>
 
  

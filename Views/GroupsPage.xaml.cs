@@ -34,11 +34,11 @@ namespace Task_Tracker
         {
             ServiceGroupBuilder groupBuilder = new ServiceGroupBuilder();
             NavGroupsList.ItemsSource = groupBuilder.groupsListBuilder();
+
         }
 
         private void NavGroupsList_ItemClick(object sender, ItemClickEventArgs e)
         {
-
         }
     }
 }

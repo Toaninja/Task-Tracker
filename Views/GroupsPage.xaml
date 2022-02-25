@@ -6,21 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
     <Page.Resources>
-        
+
+
     </Page.Resources>
 
-
     <Grid>
-        <StackPanel Orientation="Horizontal" >
-            <ListView x:Name="NavGroupsList"/>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="My Groups" Grid.Row="0" HorizontalAlignment="Center" FontSize="100" Style="{StaticResource HeaderTextBlockStyle}"/>
+        <StackPanel Grid.Row="1" Orientation="Vertical" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+            <GridView Padding="15"  x:Name="NavGroupsList" Margin="0,0,0,20"/>
+            <Button x:Name="addNewGroup" Content="Add New Group"/>
+
+
+
         </StackPanel>
-
-
-
-
+        
     </Grid>
+    
 </Page>
     
