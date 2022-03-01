@@ -27,7 +27,7 @@ namespace Task_Tracker
             this.InitializeComponent();
 
             GroupDataBind();
-
+            
         }
 
         void GroupDataBind()

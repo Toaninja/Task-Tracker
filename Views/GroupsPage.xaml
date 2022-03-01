@@ -8,7 +8,21 @@
     mc:Ignorable="d"
     Background="{ThemeResource SystemControlAcrylicWindowBrush}">
     <Page.Resources>
-
+        <DataTemplate x:Key="GroupListItem">
+            <StackPanel BorderBrush="{StaticResource SystemControlAccentDark1AcrylicElementAccentDark1Brush}" 
+                        BorderThickness="2" Padding="10"
+                        Orientation="Horizontal">
+                <TextBlock MinWidth="140" TextWrapping="WrapWholeWords" Text="{Binding Path=name}"/>
+                <Rectangle Height="40" Width="40" RadiusX="10" RadiusY="10">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="{Binding Path=colour}"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="MoreInfo">
+            <ListView x:Name="TasksList"/>
+        </DataTemplate>
 
     </Page.Resources>
 
@@ -16,16 +30,17 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="140" />
             <RowDefinition/>
+            <RowDefinition Height="90"/>
         </Grid.RowDefinitions>
+        
         <TextBlock Text="My Groups" Grid.Row="0" HorizontalAlignment="Center" FontSize="100" Style="{StaticResource HeaderTextBlockStyle}"/>
-        <StackPanel Grid.Row="1" Orientation="Vertical" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
-            <GridView Padding="15"  x:Name="NavGroupsList" Margin="0,0,0,20"/>
-            <Button x:Name="addNewGroup" Content="Add New Group"/>
-
-
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+            <GridView Padding="15" x:Name="NavGroupsList" Margin="0,0,0,20" ItemTemplate="{StaticResource GroupListItem}"/>
+            <ContentControl />
 
         </StackPanel>
-        
+        <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="20" Grid.Row="2" x:Name="addNewGroup" Content="Add New Group"/>
     </Grid>
     
 </Page>
