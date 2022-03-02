@@ -25,7 +25,7 @@ namespace Task_Tracker
         public MainPage()
         {
             this.InitializeComponent();
-            contentFrame.Navigate(typeof(HomePage));
+            contentFrame.Navigate(typeof(GroupsPage));
         }
 
 

@@ -13,9 +13,9 @@
                         BorderThickness="2" Padding="10"
                         Orientation="Horizontal">
                 <TextBlock MinWidth="140" TextWrapping="WrapWholeWords" Text="{Binding Path=name}"/>
-                <Rectangle Height="40" Width="40" RadiusX="10" RadiusY="10">
+                <Rectangle Height="40" Width="40" RadiusX="10" RadiusY="10" StrokeThickness="2" Stroke="Cyan" x:Name="rectangleGroups">
                     <Rectangle.Fill>
-                        <SolidColorBrush Color="{Binding Path=colour}"/>
+                        <SolidColorBrush x:Name="rectangleColour"/>
                     </Rectangle.Fill>
                 </Rectangle>
             </StackPanel>
@@ -40,7 +40,22 @@
             <ContentControl />
 
         </StackPanel>
-        <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="20" Grid.Row="2" x:Name="addNewGroup" Content="Add New Group"/>
+        <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="20" Grid.Row="2" x:Name="addNewGroup" Content="Add New Group" Click="addNewGroup_Click"/>
+
+        <Popup Grid.Row="1" x:Name="newGroupPopup" IsOpen="False"
+               VerticalAlignment="Center" HorizontalAlignment="Center"      
+               IsLightDismissEnabled="True"
+               >
+            
+            <StackPanel Margin="30" Background="{StaticResource SystemControlAccentDark1AcrylicWindowAccentDark1Brush}">
+                <TextBlock Text="Name your new group!!"/>
+                <TextBox x:Name="groupName" PlaceholderText="Group Name" Padding="10" KeyDown="OnKeyDownHandler"/>
+                <DatePicker x:Name="DatePickerCheck" HorizontalAlignment="Center"/>
+                <Button x:Name="addGroup" Content="Confirm" HorizontalAlignment="Center" Padding="10"/>
+            </StackPanel>
+            
+
+        </Popup>
     </Grid>
     
 </Page>
