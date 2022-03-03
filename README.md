@@ -20,4 +20,7 @@ WIP
 ### Currently in 
 `Alpha 1.0.0`
 ### Next steps
-Create interface between server and client
+* Ability to add and delete groups
+* Ability to add and delete tasks
+* Display colour for the groups on their tile
+* 
